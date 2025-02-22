@@ -9,7 +9,8 @@
     --cAzul: #0A3161;
     --cAzulClaro: #09b3fe;
     --cvermelho: #B31942;
-    --ctxtprincipal:#fff;
+    --ctxtprincipal:#EEF3F6;
+    --ctxsecundario:#cad3da;
     --fpradrao: sans-seif;
     --fmontserrat: "Montserrat", serif;
 
@@ -37,7 +38,7 @@ p{font-size: 18px; line-height: 130%;}
     height: 100%;
     padding: 16px;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
 }
 
 .txtgradiente {
@@ -75,6 +76,9 @@ p{font-size: 18px; line-height: 130%;}
    }
 }
 
+.balance{text-wrap: balance;}
+.fw-600{font-weight: 600;}
+
 /* fim utilities */
 
 .banner{
@@ -93,7 +97,7 @@ p{font-size: 18px; line-height: 130%;}
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 16px;
+    
     
 }
 .cont-banner img{
@@ -101,9 +105,11 @@ p{font-size: 18px; line-height: 130%;}
 }
 .cont-banner h1{
     color:var(--ctxtprincipal);
-    max-width: 45%;
+    max-width: 500px;
     position: relative;
-    margin-bottom: 20px;
+    margin: 16px 0px;
+    font-weight: 400;
+   
    
 }
 .cont-banner-headline-deco{
@@ -115,12 +121,23 @@ p{font-size: 18px; line-height: 130%;}
     text-transform: uppercase;
     position: absolute;
     top: 90px;
-    right: 70px;
+    right: 30px;
     color: var(--ctxtprincipal);
+    
 }
 .cont-banner p{
-    font-size: 28px;
-    max-width: 45%;
+    font-size: 24px;
+    max-width: 470px;
+    font-weight: 400;
+    color:var(--ctxsecundario);
+   
+}
+.cont-banner-subheadline-deco{
+    color:var(--ctxtprincipal);
+    font-weight: 500;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 20px;
 }
 
 
