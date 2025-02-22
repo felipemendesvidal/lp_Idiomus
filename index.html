@@ -17,7 +17,6 @@
 
     <div class="banner">
         <div class="overlay">
-
             <div class=" glss cont-banner">
                 <img src="img/logo idiomus.webp" alt="">
                 <h1>Descubra a <span class="txtgradiente fw-600">Rota da Fluencia</span> de Ouvido <br><span class="cont-banner-headline-deco brilox">(ainda em 2024)</span></h1>
@@ -27,53 +26,43 @@
                     liberar meu acesso agora
                     <i class="fa-solid fa-lock-open"></i>
                 </a>
-
             </div>
-
-        </div>
-
-    </div>
-
-
-
-
-<div class="outer">
-        <div>
-
-            <div class="loop">
-
-                <div class="content">
-                    &nbsp;  LOREM IPSUM 
-                    &nbsp;  LOREM IPSUM 
-                    &nbsp;  LOREM IPSUM
-                    &nbsp;  LOREM IPSUM
-                    &nbsp;  LOREM IPSUM
-                    &nbsp;  LOREM IPSUM
-            </div>
-
         </div>
     </div>
-</div>
+
+
+    <!-- marqueee -->
+    <div class="outer">
+            <div>
+                <div class="loop">
+                    <div class="content">
+                        &nbsp;&#9900; ROTA DA FLUENCIA 
+                </div>
+            </div>
+        </div>
+    </div>
     
-<script>
-    document.querySelectorAll('.outer').forEach(el => {
-        let content = el.querySelector('.content');
-    
-        repeatContent(content, el.offsetWidth);
-    
-        let slider = el.querySelector('.loop');
-        slider.innerHTML = slider.innerHTML + slider.innerHTML;
-    });
-    
-    function repeatContent(el, till) {
-        let html = el.innerHTML;
-        let counter = 0;
-        while (el.offsetWidth < till && counter < 100) {
-            el.innerHTML += html;
-            counter += 1;
+    <!-- code marqueee -->
+    <script>
+        document.querySelectorAll('.outer').forEach(el => {
+            let content = el.querySelector('.content');
+        
+            repeatContent(content, el.offsetWidth);
+        
+            let slider = el.querySelector('.loop');
+            slider.innerHTML = slider.innerHTML + slider.innerHTML;
+        });
+        
+        function repeatContent(el, till) {
+            let html = el.innerHTML;
+            let counter = 0;
+            while (el.offsetWidth < till && counter < 100) {
+                el.innerHTML += html;
+                counter += 1;
+            }
         }
-    }
-</script>
+    </script>
+    <!-- fim marquee -->
     
     
 </body>

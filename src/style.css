@@ -159,15 +159,27 @@ p{font-size: 18px; line-height: 130%;}
     
     
     .outer {
-        background-color: rebeccapurple;
-        padding: 10px 0px 0px 0px;
+        background-color: var(--cvermelho);
+        padding: 0px 0px 0px 0px;
         overflow: hidden;
+        position: relative;
     }
+
+    .outer::before{
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: linear-gradient(to right, var(--cvermelho) 0%, transparent 25%, transparent 85%, var(--cvermelho) 100%);
+        pointer-events: none;
+        }
     
     .outer div {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 3px 0px 2px 0px;
     }
     
     .loop {
