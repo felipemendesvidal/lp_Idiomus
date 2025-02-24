@@ -454,3 +454,84 @@ footer p a{color: var(--ctxtprincipal);}
    
 
 }/* fim media tablet*/
+
+
+/* media meu tablet */
+@media only screen and (max-width: 712px){
+   
+  
+
+
+
+h1{font-size: 28px; line-height: 120%;}
+
+
+.overlay{
+   
+    padding: 0px 0px 0px 30px;
+    
+}
+
+
+
+
+/* fim utilities */
+
+.banner{
+    height: 90vh; 
+    
+}
+
+.cont-banner{
+    width: 60%;
+    padding: 30px;
+      
+}
+
+.cont-banner h1{
+
+    margin-bottom: 26px;
+    
+}
+.cont-banner-headline-deco{
+    
+    top: 60px;
+    left: 0px;
+    
+    
+}
+.cont-banner p{
+    font-size: 18px;
+    max-width: 320px;
+    
+   
+}
+.cont-banner-subheadline-deco{
+    font-size: 18px;
+}
+.btn-cta{
+   
+    max-width: 320px;
+    padding: 4px;
+    
+    gap:6px;
+    
+    font-size: 14px;
+    margin-top: 10px;
+    
+   
+
+}
+
+
+.btn-cta-interno{
+   
+    padding: 10px 16px;
+   
+    
+
+}
+
+
+}
+/* fim responsivo meu tablet */
