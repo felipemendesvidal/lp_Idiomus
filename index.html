@@ -2,67 +2,58 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Rota da fluência de Ouvido ">
+    <meta name="description" content="Rota da fluência de Ouvido">
     <meta name="keywords" content="ingles, fluencia">
     <meta name="author" content="Felipe Vidal">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rota da fluência de Ouvido</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <div class="banner">
+    <header class="banner">
         <div class="overlay">
-            <div class=" glss cont-banner">
-                <img src="img/logo idiomus.webp" alt="">
+            <div class="glss cont-banner">
+                <img src="img/logo idiomus.webp" alt="Logo da Idiomus">
                 <h1>Descubra a <span class="txtgradiente fw-600">Rota da Fluência</span> de Ouvido <br><span class="cont-banner-headline-deco brilox">(ainda em 2024)</span></h1>
                 <p>Resultado garantido ou seu dinheiro de volta <span class="cont-banner-subheadline-deco">+ R$ 500,00</span></p>
                 <a href="#" class="btn-cta">
                     <span class="btn-cta-interno">quero <i class="fa-solid fa-arrow-right"></i></span>
                     liberar meu acesso agora
-                    </i>
                 </a>
             </div>
         </div>
-    </div>
+    </header>
 
-
-    <!-- marqueee -->
-    <div class="outer">
-            <div>
-                <div class="loop">
-                    <div class="content">
-                        &nbsp;&#9900; ROTA DA FLUÊNCIA
+    <main>
+        <div class="outer">
+            <div class="loop">
+                <div class="content">
+                    &nbsp;&#9900; ROTA DA FLUÊNCIA
                 </div>
             </div>
         </div>
-    </div>
 
-
-    <div class=" bg-vermelho">
-        <div class="p-container container bg-quadrados">
-
-            <div class="conteudo-principal">
-                <p>“Esse ano vai ser diferente…” </p>
-                <p class="headline gradientetxt">Provavelmente você falou isso lá em janeiro, estou certo?!</p>
-                <p>E aí os meses vão passando… um após o outro… até que chegamos próximo ao fim de mais um ano e eu te pergunto: <span class="gradientetxt destaque_padrao"> está sua promessa de aprender inglês em 2023?</span></p>
-                <p>Eu sei, eu sei… trabalho, estudos, família… é difícil conciliar tudo isso e ainda arrumar tempo para o inglês. Porém, <span class="destaque">preciso ser sincero: nada vai mudar se você não mudar!</span></p>
-                <p class="gradientetxt headline-secundaria">Mas a boa notícia é que ainda dá tempo de você virar esse jogo…</p>
-
+        <section class="bg-vermelho">
+            <div class="p-container container bg-quadrados">
+                <div class="conteudo-principal">
+                    <p>“Esse ano vai ser diferente…” </p>
+                    <p class="headline gradientetxt">Provavelmente você falou isso lá em janeiro, estou certo?!</p>
+                    <p>E aí os meses vão passando… um após o outro… até que chegamos próximo ao fim de mais um ano e eu te pergunto: <span class="gradientetxt destaque_padrao"> está sua promessa de aprender inglês em 2023?</span></p>
+                    <p>Eu sei, eu sei… trabalho, estudos, família… é difícil conciliar tudo isso e ainda arrumar tempo para o inglês. Porém, <span class="destaque">preciso ser sincero: nada vai mudar se você não mudar!</span></p>
+                    <p class="gradientetxt headline-secundaria">Mas a boa notícia é que ainda dá tempo de você virar esse jogo…</p>
+                </div>
             </div>
-            
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy;2025 | Todos os direitos reservados | Feito por <a href="felipevidalmendes.com">Felipe Vidal</a></p>
+        <p>&copy;2025 | Todos os direitos reservados | Feito por <a href="https://felipevidalmendes.com" target="_blank" rel="noopener noreferrer">Felipe Vidal</a></p>
     </footer>
     
-    <!-- code marqueee -->
     <script>
         document.querySelectorAll('.outer').forEach(el => {
             let content = el.querySelector('.content');
@@ -73,7 +64,6 @@
             slider.innerHTML = slider.innerHTML + slider.innerHTML;
         });
         
-        // pegar elemento a ser repeido e a largura que ele deve ter (el = elemento, till = largura)
         function repeatContent(el, till) {
             let html = el.innerHTML;
             let counter = 0;
@@ -83,8 +73,6 @@
             }
         }
     </script>
-    <!-- fim marquee -->
-    
     
 </body>
 </html>
