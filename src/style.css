@@ -8,6 +8,7 @@
 :root{
     --cAzul: #1872BB;
     --cAzulClaro: #09b3fe;
+    --brancoTranparente: #ffffff8e;
     --cvermelho: #B31942;
     --ctxtprincipal:#EEF3F6;
     --ctxsecundario:#cad3da;
@@ -27,16 +28,23 @@ p{font-size: 18px; line-height: 130%;}
 /* utilities */
 
 .fit{width: fit-content;}
+
+.bg-vermelho{ background-color: var(--cvermelho);}
+.balance{text-wrap: balance;}
+.fw-600{font-weight: 600;}
+.color_txsecundario{color: var(--ctxsecundario);}
 .glss{
     background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+   
 }
 .overlay{
     width: 100%;
     height: 100%;
-    padding: 5px;
+    padding: 0px 0px 0px 50px;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
     display: flex;
@@ -61,10 +69,18 @@ p{font-size: 18px; line-height: 130%;}
    color: transparent !important;
    -webkit-text-fill-color: transparent;
    transition: all .8s;
-   
     animation: 3.4s linear infinite brilhox;
    
 }
+.gradientetxt {
+    background: linear-gradient(93deg, #BDCEDB -3.56%, #EEF3F6 47.88%, #BDCEDB 80.33%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+   }
 
 
 
@@ -78,8 +94,7 @@ p{font-size: 18px; line-height: 130%;}
    }
 }
 
-.balance{text-wrap: balance;}
-.fw-600{font-weight: 600;}
+
 
 /* fim utilities */
 
@@ -141,12 +156,89 @@ p{font-size: 18px; line-height: 130%;}
     font-style: italic;
     font-size: 20px;
 }
+.btn-cta{
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 460px;
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    gap:16px;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-top: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    color: var(--ctxsecundario);
+   
+
+}
+.btn-cta:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--ctxtprincipal);
+}
+
+.btn-cta-interno{
+    background-color: rgba(255, 0, 0, 0);
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.5s;
+    padding: 10px 46px;
+    border-radius: 100px;
+    color: var(--ctxsecundario);
+    font-weight: 500;
+    
+    text-transform: uppercase;
+}
+.btn-cta-interno:hover{
+    color: var(--ctxtprincipal);
+}
+
+
+ 
+.btn-cta-interno:before{
+    content: "";
+    border-radius: inherit;
+    background: linear-gradient(20deg, var(--cAzul), transparent, var(--cAzulClaro),var(--cAzul), transparent, var(--cAzulClaro));
+    background-size: 1800%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -2;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    transition: 0.5s;
+    animation: AnimationName 5s linear infinite;
+}
+.btn-cta-interno:after{
+    content: "";
+    border-radius: inherit;
+    background-color: var(--cAzul);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    
+}
+
+@keyframes AnimationName {
+    0%{background-position:0%}
+    50%{background-position:50%}
+    100%{background-position:100%}
+}
 
 
 
 /* marqueee */
 .content {
-    color:#fff;
+    color:var(--ctxtprincipal);
     text-align: center;
     font-family: "Inter"!important;
     font-size: 18px;
@@ -158,14 +250,14 @@ p{font-size: 18px; line-height: 130%;}
     }
     
     
-    .outer {
+.outer {
         background-color: var(--cvermelho);
-        padding: 0px 0px 0px 0px;
+        padding: 0px;
         overflow: hidden;
         position: relative;
-    }
+}
 
-    .outer::before{
+.outer::before{
         content:"";
         position: absolute;
         width: 100%;
@@ -175,26 +267,112 @@ p{font-size: 18px; line-height: 130%;}
         pointer-events: none;
         }
     
-    .outer div {
+.outer div {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 3px 0px 2px 0px;
-    }
+}
     
-    .loop {
+.loop {
         white-space: nowrap;
         animation: loop-anim 50s linear infinite;
         /* Mude a velocidade da animação aqui */
-    }
+}
     
     
     
-    @keyframes loop-anim {
+@keyframes loop-anim {
         0% {
             margin-left: 0;
         }
         100% {
             margin-left: -50%;
         }
-    }
+}
+
+
+/* segunda dobra */
+
+
+.container{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+  
+}
+
+.bg-quadrados{
+    
+    position: relative;
+    width: 100%;
+
+}
+
+
+.bg-quadrados::before {
+    content: "";
+    opacity: 0.3;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, var(--brancoTranparente), var(--brancoTranparente) 1px, transparent 1px, transparent 11px), linear-gradient(0deg, var(--brancoTranparente), var(--brancoTranparente) 1px, transparent 1px, transparent 11px);
+    background-size: 50px 50px;
+    position: absolute;
+    border-radius: 0px;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.bg-quadrados::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-image: radial-gradient(transparent 0%, var(--cvermelho) 85%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.conteudo-principal{
+    z-index: 10;
+    max-width: 900px;
+    padding: 50px 50px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+   
+}
+.conteudo-principal p{
+    color: var(--ctxsecundario);
+    font-weight: 300;
+    font-size: 18px; line-height: 140%;
+}
+.conteudo-principal .headline{
+    font-size: 38px; 
+    line-height: 120%;
+    font-weight: 500;
+}
+.conteudo-principal .destaque_padrao{
+    font-weight: 500;
+    font-style: italic;
+   
+}
+.destaque{
+    color: var(--ctxtprincipal);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.conteudo-principal .headline-secundaria{
+    font-size: 28px; 
+    line-height: 120%;
+    font-weight: 500;
+}
